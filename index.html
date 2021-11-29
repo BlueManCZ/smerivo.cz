@@ -2,12 +2,26 @@
 <html lang="cz">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio | Ivo Šmerek</title>
+    <title>Portfolio · Ivo Šmerek</title>
+    <meta name="description" content="Webová prezentace a portfolio.">
+    <meta name="author" content="Ivo Šmerek">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="Římskokatolická farnost sv. Mořice Olomouc">
+    <meta property="og:description" content="Webové stránky římskokatolické farnosti svatého Mořice Olomouc.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://moric-olomouc.cz/static/moric_logo2.png">
+    <meta property="og:url" content="https://moric-olomouc.cz">
+
+    <link rel="shortcut icon" href="/static/moric_logo.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/moric_logo2.png">
+
     <link rel="stylesheet" href="static/styles/styles.css">
     <link rel="stylesheet" href="static/GifLoader.js/src/css/loader.css">
     <script src="static/GifLoader.js/src/js/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 </head>
-<body onload="runAnimations()">
+<body onload="runAnimations()" onscroll="checkScrolling()">
     <script>
         new Loader("static/GifLoader.js/src/images/hex-loader.gif", true);
     </script>
@@ -28,15 +42,19 @@
 
         <h2><span class="red">Programování,</span> <span class="yellow">design</span> &&nbsp;<span class="blue">další</span></h2>
     </div>
-    <nav>
+    <nav id="navbar">
         <div class="fixed-width">
-            <a href="#o-mne" class="active">O mně</a>
-            <a href="#moje-navrhy">Moje návrhy</a>
-            <a href="#dalsi-projekty">Další projekty</a>
+            <div id="navbar-buttons">
+                <a href="#o-mne" class="active" onclick="scrollToId(this, 400)">O mně</a>
+                <a href="#moje-navrhy" onclick="scrollToId(this, 400)">Moje návrhy</a>
+                <a href="#dalsi-projekty" onclick="scrollToId(this, 400)">Další projekty</a>
+            </div>
+            <img id="navbar-logo" src="static/images/logo.png" alt="smerivo.cz logo">
         </div>
     </nav>
     <main>
         <article class="fixed-width about">
+            <span id="o-mne" class="sitemark"></span>
             <img class="profile" src="static/images/profile.jpg" alt="Photo of me">
             <h3>Dobrý den, jmenuji se <span class="red uppercase bold">Ivo Šmerek</span>. Vítejte na mém portfoliu.</h3>
             <p>
@@ -50,6 +68,65 @@
             </p>
 
         </article>
+        <article class="my-designs">
+            <span id="moje-navrhy" class="sitemark"></span>
+            <div class="fixed-width">
+                <div>
+                    <h3><span class="underline">Moje návrhy</span></h3>
+                </div>
+                <div class="item">
+                    <a href="https://www.oknodopraxe.upol.cz" target="_blank" class="image-wrapper strips-1">
+                        <img class="preview" src="static/images/screenshots/okno-do-praxe.jpg" alt="Okno do praxe">
+                    </a>
+                    <h4>Okno do praxe</h4>
+                    <h5>Univerzita Palackého v Olomouci</h5>
+                    <div class="tags">
+                        <a href="https://www.python.org/" target="_blank">Python</a>
+                        <a href="https://www.djangoproject.com/" target="_blank">Django</a>
+                        <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+                        <a href="https://sass-lang.com/" target="_blank">SASS</a>
+                    </div>
+                    <p>Okno do praxe je setkání zaměstnavatelů a studentů Univerzity Palackého v&nbsp;Olomouci.
+                        Jednalo se o kompletní redesign a přestavbu webu na novější technologie.</p>
+                    <a href="https://www.oknodopraxe.upol.cz" target="_blank">www.oknodopraxe.upol.cz</a>
+                </div>
+                <div class="item">
+                    <a href="https://www.moric-olomouc.cz" target="_blank" class="image-wrapper strips-2">
+                        <img class="preview" src="static/images/screenshots/moric-olomouc.jpg" alt="Mořic Olomouc">
+                    </a>
+                    <h4>Sv. Mořic Olomouc</h4>
+                    <h5>Římskokatolická farnost svatého Mořice Olomouc</h5>
+                    <div class="tags">
+                        <a href="https://www.python.org/" target="_blank">Python</a>
+                        <a href="https://www.djangoproject.com/" target="_blank">Django</a>
+                        <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+                        <a href="https://leafletjs.com/" target="_blank">Leaflet</a>
+                        <a href="https://sass-lang.com/" target="_blank">SASS</a>
+                    </div>
+                    <p>Opět se jednalo o redesign a přestavbu původního starého farníhu webu. Současně vznikl
+                        i <a href="https://www.varhany.moric-olomouc.cz" target="_blank">druhý web</a> pro Svatomořické varhany. Na tom je mimo jiné
+                    spuštěna aplikace pro adopci píšťal.</p>
+                    <a href="https://www.moric-olomouc.cz" target="_blank">www.moric-olomouc.cz</a>
+                </div>
+                <div class="item">
+                    <a href="http://colidocs.webly3d.net:5000" target="_blank" class="image-wrapper strips-1">
+                        <img class="preview" src="static/images/screenshots/colidocs.png" alt="Colidocs">
+                    </a>
+                    <h4>Colidocs</h4>
+                    <h5>Moje bakalářská práce</h5>
+                    <div class="tags">
+                        <a href="https://lisp-lang.org/" target="_blank">Common Lisp</a>
+                        <a href="http://8arrow.org/caveman/" target="_blank">Caveman 2</a>
+                        <a href="https://vincentgarreau.com/particles.js/" target="_blank">particles.js</a>
+                        <a href="https://github.com/googlearchive/code-prettify" target="_blank">code-prettify</a>
+                    </div>
+                    <p>Colidocs je fork původního projetu <a href="https://github.com/quickdocs/quickdocs-server">Quickdocs</a>
+                    s novým designem, přidaným přihlašováním uživatelů přes GitHub a možností vytvářet příklady použití jednotlivých
+                    symbolů jazyka.</p>
+                    <a href="http://colidocs.webly3d.net:5000" target="_blank">colidocs.webly3d.net:5000</a>
+                </div>
+            </div>
+        </article>
     </main>
 
     <script>
@@ -57,6 +134,29 @@
             let titleBackgournd = document.getElementById("title-background");
             titleBackgournd.style.backgroundPosition = "381px 35%";
             titleBackgournd.style.transform = "none";
+        }
+
+        function scrollToId(button, time) {
+            console.log(button);
+            let id = button.getAttribute("href");
+            $("html, body").animate({ scrollTop: $(id).offset().top }, time);
+        }
+
+        function checkScrolling() {
+            let navbar = document.getElementById("navbar");
+            if (navbar.getBoundingClientRect().top > 0) {
+                // DOWN
+                document.getElementById("navbar-buttons").style.top = "";
+                document.getElementById("navbar-logo").style.bottom = "";
+                document.getElementById("navbar").style.borderTopColor = "";
+                document.getElementById("navbar").style.borderBottomColor = "";
+            } else {
+                // UP
+                document.getElementById("navbar-buttons").style.top = "-60px";
+                document.getElementById("navbar-logo").style.bottom = "30px";
+                document.getElementById("navbar").style.borderTopColor = "white";
+                document.getElementById("navbar").style.borderBottomColor = "#ececec";
+            }
         }
     </script>
 </body>

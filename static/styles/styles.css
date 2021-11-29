@@ -36,6 +36,7 @@ a {
 }
 a:hover {
   text-decoration: underline;
+  color: #019db9;
 }
 body {
   background-color: #f6f6f6;
@@ -111,9 +112,24 @@ nav {
   padding-bottom: 25px;
   padding-top: 25px;
   border-top: solid 1px #ececec;
+  border-bottom: solid 1px white;
   background: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   z-index: 4;
+  height: 23px;
+  overflow: hidden;
+}
+nav #navbar-buttons {
+  transition: top ease-in-out 200ms;
+  position: relative;
+  z-index: 1;
+  top: 0;
+}
+nav #navbar-logo {
+  height: 40px;
+  position: relative;
+  bottom: -30px;
+  transition: all ease-in-out 200ms;
 }
 nav a {
   outline: none;
@@ -125,25 +141,39 @@ nav a {
   padding: 7px 30px;
   border-radius: 20px;
   margin: 0 15px;
+  box-shadow: inset 0 0 0 1px #ececec;
 }
 nav a:hover {
   background-color: #ffe576;
   text-decoration: none;
+  box-shadow: none;
+  color: #515151;
 }
 nav .active {
   background-color: #ff3b65 !important;
   color: white !important;
+  box-shadow: none;
+}
+article {
+  position: relative;
+}
+.sitemark {
+  position: absolute;
+  top: -70px;
 }
 .about {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 .about h3 {
   margin: 0;
   font-size: 22px;
+  letter-spacing: -1px;
 }
 .about p {
   font-size: 19px;
   text-align: justify;
+  margin-bottom: 0;
 }
 .profile {
   width: 205px;
@@ -157,5 +187,147 @@ nav .active {
 }
 .bold {
   font-weight: bold;
+}
+.my-designs {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.my-designs a {
+  letter-spacing: 0;
+}
+.my-designs h3 {
+  text-align: center;
+}
+.my-designs h3 span {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 7px 30px;
+  border-radius: 20px;
+  margin: 0 15px 40px;
+  background-color: #ff3b65 !important;
+  color: white !important;
+}
+.my-designs h3 span {
+  position: relative;
+}
+.my-designs .item {
+  margin-bottom: 100px;
+}
+.my-designs .image-wrapper {
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin-right: 40px;
+}
+.my-designs .image-wrapper .preview {
+  width: 390px;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.my-designs .strip {
+  content: "";
+  width: 90px;
+  height: 15px;
+  position: absolute;
+  border-radius: 5px;
+}
+.my-designs .strips-1::before {
+  content: "";
+  width: 90px;
+  height: 15px;
+  position: absolute;
+  border-radius: 5px;
+  background: #ff5265;
+  transform: rotate(-45deg);
+  left: -26px;
+  top: 13px;
+}
+.my-designs .strips-1::after {
+  content: "";
+  width: 90px;
+  height: 15px;
+  position: absolute;
+  border-radius: 5px;
+  background: #20b4d0;
+  transform: rotate(-45deg);
+  right: -26px;
+  bottom: 13px;
+}
+.my-designs .strips-2::before {
+  content: "";
+  width: 90px;
+  height: 15px;
+  position: absolute;
+  border-radius: 5px;
+  background: #ff5265;
+  transform: rotate(-45deg);
+  left: -26px;
+  top: 13px;
+}
+.my-designs .strips-2::after {
+  content: "";
+  width: 90px;
+  height: 15px;
+  position: absolute;
+  border-radius: 5px;
+  background: #20b4d0;
+  transform: rotate(-45deg);
+  right: -26px;
+  bottom: 13px;
+}
+.my-designs .strips-2::before {
+  content: "";
+  width: 90px;
+  height: 15px;
+  position: absolute;
+  border-radius: 5px;
+  transform: rotate(45deg);
+  left: unset;
+  right: -26px;
+}
+.my-designs .strips-2::after {
+  content: "";
+  width: 90px;
+  height: 15px;
+  position: absolute;
+  border-radius: 5px;
+  background: #20b4d0;
+  transform: rotate(45deg);
+  left: -26px;
+}
+.my-designs h4 {
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: -1px;
+  margin-bottom: 5px;
+}
+.my-designs h5 {
+  font-weight: normal;
+  font-size: 17px;
+  color: grey;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.my-designs p {
+  color: grey;
+}
+.my-designs .tags a {
+  background: #515151;
+  border-radius: 20px;
+  padding: 3px 12px;
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+  margin-right: 5px;
+  opacity: 0.8;
+}
+.my-designs .tags a:hover {
+  opacity: 1;
 }
 /*# sourceMappingURL=styles.css.map */
