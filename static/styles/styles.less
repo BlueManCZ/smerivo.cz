@@ -25,7 +25,7 @@ a {
   color: #04bfe0;
   font-weight: bold;
   letter-spacing: -1px;
-  
+
   &:hover {
     text-decoration: underline;
     color: #019db9;
@@ -136,6 +136,7 @@ nav {
     position: relative;
     bottom: -30px;
     transition: all ease-in-out 200ms;
+    cursor: pointer;
   }
 
   a {
@@ -169,7 +170,7 @@ article {
   position: relative;
 }
 
-.sitemark {
+.site-mark {
   position: absolute;
   top: -70px;
 }
@@ -207,35 +208,38 @@ article {
   font-weight: bold;
 }
 
+.title {
+  text-align: center;
+
+  span {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 7px 30px;
+    border-radius: 20px;
+    margin: 0 15px 40px;
+    background-color: @red !important;
+    color: white !important;
+  }
+
+  span {
+    position: relative;
+  }
+}
+
+article {
+  padding-top: 30px;
+}
+
 .my-designs {
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  padding-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 1px;
 
   a {
     letter-spacing: 0;
-  }
-
-  h3 {
-    text-align: center;
-
-    span {
-      display: inline-block;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 13px;
-      padding: 7px 30px;
-      border-radius: 20px;
-      margin: 0 15px 40px;
-      background-color: @red !important;
-      color: white !important;
-    }
-
-    span {
-      position: relative;
-    }
   }
 
   .item {
@@ -335,4 +339,11 @@ article {
       }
     }
   }
+}
+
+.additions {
+  text-align: center;
+  font-size: 19px;
+  margin: 0 auto auto;
+  max-width: 590px;
 }

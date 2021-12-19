@@ -130,6 +130,7 @@ nav #navbar-logo {
   position: relative;
   bottom: -30px;
   transition: all ease-in-out 200ms;
+  cursor: pointer;
 }
 nav a {
   outline: none;
@@ -157,7 +158,7 @@ nav .active {
 article {
   position: relative;
 }
-.sitemark {
+.site-mark {
   position: absolute;
   top: -70px;
 }
@@ -188,19 +189,10 @@ article {
 .bold {
   font-weight: bold;
 }
-.my-designs {
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  padding-top: 30px;
-  padding-bottom: 50px;
-}
-.my-designs a {
-  letter-spacing: 0;
-}
-.my-designs h3 {
+.title {
   text-align: center;
 }
-.my-designs h3 span {
+.title span {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
@@ -212,8 +204,19 @@ article {
   background-color: #ff3b65 !important;
   color: white !important;
 }
-.my-designs h3 span {
+.title span {
   position: relative;
+}
+article {
+  padding-top: 30px;
+}
+.my-designs {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  padding-bottom: 1px;
+}
+.my-designs a {
+  letter-spacing: 0;
 }
 .my-designs .item {
   margin-bottom: 100px;
@@ -329,5 +332,11 @@ article {
 }
 .my-designs .tags a:hover {
   opacity: 1;
+}
+.additions {
+  text-align: center;
+  font-size: 19px;
+  margin: 0 auto auto;
+  max-width: 590px;
 }
 /*# sourceMappingURL=styles.css.map */

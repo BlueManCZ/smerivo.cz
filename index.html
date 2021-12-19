@@ -47,14 +47,14 @@
             <div id="navbar-buttons">
                 <a href="#o-mne" class="active" onclick="scrollToId(this, 400)">O mně</a>
                 <a href="#moje-navrhy" onclick="scrollToId(this, 400)">Moje návrhy</a>
-                <a href="#dalsi-projekty" onclick="scrollToId(this, 400)">Další projekty</a>
+                <a href="#dalsi-projekty" onclick="scrollToId(this, 600)">Další projekty</a>
             </div>
-            <img id="navbar-logo" src="static/images/logo.png" alt="smerivo.cz logo">
+            <img id="navbar-logo" src="static/images/logo.png" alt="smerivo.cz logo" onclick="scrollToTop();">
         </div>
     </nav>
     <main>
         <article class="fixed-width about">
-            <span id="o-mne" class="sitemark"></span>
+            <span id="o-mne" class="site-mark"></span>
             <img class="profile" src="static/images/profile.jpg" alt="Photo of me">
             <h3>Dobrý den, jmenuji se <span class="red uppercase bold">Ivo Šmerek</span>. Vítejte na mém portfoliu.</h3>
             <p>
@@ -69,10 +69,10 @@
 
         </article>
         <article class="my-designs">
-            <span id="moje-navrhy" class="sitemark"></span>
+            <span id="moje-navrhy" class="site-mark"></span>
             <div class="fixed-width">
                 <div>
-                    <h3><span class="underline">Moje návrhy</span></h3>
+                    <h3 class="title"><span class="underline">Moje návrhy</span></h3>
                 </div>
                 <div class="item">
                     <a href="https://www.oknodopraxe.upol.cz" target="_blank" class="image-wrapper strips-1">
@@ -103,7 +103,7 @@
                         <a href="https://leafletjs.com/" target="_blank">Leaflet</a>
                         <a href="https://sass-lang.com/" target="_blank">SASS</a>
                     </div>
-                    <p>Opět se jednalo o redesign a přestavbu původního starého farníhu webu. Současně vznikl
+                    <p>Opět se jednalo o redesign a přestavbu původního starého farního webu. Současně vznikl
                         i <a href="https://www.varhany.moric-olomouc.cz" target="_blank">druhý web</a> pro Svatomořické varhany. Na tom je mimo jiné
                     spuštěna aplikace pro adopci píšťal.</p>
                     <a href="https://www.moric-olomouc.cz" target="_blank">www.moric-olomouc.cz</a>
@@ -116,30 +116,62 @@
                     <h5>Moje bakalářská práce</h5>
                     <div class="tags">
                         <a href="https://lisp-lang.org/" target="_blank">Common Lisp</a>
-                        <a href="http://8arrow.org/caveman/" target="_blank">Caveman 2</a>
+                        <a href="https://8arrow.org/caveman/" target="_blank">Caveman 2</a>
                         <a href="https://vincentgarreau.com/particles.js/" target="_blank">particles.js</a>
                         <a href="https://github.com/googlearchive/code-prettify" target="_blank">code-prettify</a>
                     </div>
-                    <p>Colidocs je fork původního projetu <a href="https://github.com/quickdocs/quickdocs-server">Quickdocs</a>
+                    <p>Colidocs je fork původního projektu <a href="https://github.com/quickdocs/quickdocs-server">Quickdocs</a>
                     s novým designem, přidaným přihlašováním uživatelů přes GitHub a možností vytvářet příklady použití jednotlivých
                     symbolů jazyka.</p>
                     <a href="http://colidocs.webly3d.net:5000" target="_blank">colidocs.webly3d.net:5000</a>
                 </div>
+                <div class="item">
+                    <a href="http://jedeme.webly3d.net/" target="_blank" class="image-wrapper strips-2">
+                        <img class="preview" src="static/images/screenshots/jedeme-online.jpg" alt="Colidocs">
+                    </a>
+                    <h4>Jedeme Online</h4>
+                    <h5>Projekt Jedeme v tom společně</h5>
+                    <div class="tags">
+                        <a href="https://www.python.org/" target="_blank">Python</a>
+                        <a href="https://flask.palletsprojects.com/" target="_blank">Flask</a>
+                        <a href="https://sass-lang.com/" target="_blank">SCSS</a>
+                    </div>
+                    <p>Webová aplikace již zaniklého projektu Jedeme v tom společně. Projekt
+                    měl za cíl aktivizovat seniory v domovech soutěživou formou společné fyzické aktivity
+                    - jízdy na rotopedech.</p>
+                    <a href="http://jedeme.webly3d.net/" target="_blank">jedeme.webly3d.net</a>
+                </div>
             </div>
         </article>
+        <!--article>
+            <span id="dalsi-projekty" class="site-mark"></span>
+            <div class="fixed-width">
+                <div>
+                    <h3 class="title"><span class="underline">Další projekty</span></h3>
+                </div>
+                <p class="additions">Ve svém volném čase se rád věnuji i tvorbě hudby a 3D grafice.
+                Jsem velký fanoušek <a href="https://cs.wikipedia.org/wiki/Linux" target="blank">
+                Linuxu</a> a zastánce <a href="https://cs.wikipedia.org/wiki/Otev%C5%99en%C3%BD_software" target="_blank">
+                open-source</a> technologií.</p>
+            </div>
+        </article-->
     </main>
 
     <script>
         function runAnimations() {
-            let titleBackgournd = document.getElementById("title-background");
-            titleBackgournd.style.backgroundPosition = "381px 35%";
-            titleBackgournd.style.transform = "none";
+            let titleBackground = document.getElementById("title-background");
+            titleBackground.style.backgroundPosition = "381px 35%";
+            titleBackground.style.transform = "none";
         }
 
         function scrollToId(button, time) {
-            console.log(button);
             let id = button.getAttribute("href");
             $("html, body").animate({ scrollTop: $(id).offset().top }, time);
+        }
+
+        function scrollToTop() {
+            history.pushState("", document.title, window.location.pathname);
+            $("html, body").animate({ scrollTop: 0 }, 400);
         }
 
         function checkScrolling() {
