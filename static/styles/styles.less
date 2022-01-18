@@ -258,7 +258,8 @@ article {
     margin-right: 40px;
 
     .preview {
-      width: 390px;
+      max-width: 390px;
+      width: 100%;
       border-radius: 10px;
       display: block;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -321,7 +322,7 @@ article {
     font-size: 17px;
     color: grey;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   p {
@@ -338,6 +339,8 @@ article {
       text-decoration: none;
       margin-right: 5px;
       opacity: 0.8;
+      display: inline-block;
+      margin-top: 7px;
 
       &:hover {
         opacity: 1;
@@ -351,6 +354,19 @@ article {
   font-size: 19px;
   margin: 0 auto auto;
   max-width: 590px;
+}
+
+@media (max-width: 920px) {
+  .my-designs {
+    .item {
+      margin-bottom: 40px;
+    }
+
+    .image-wrapper {
+      float: unset;
+      margin-right: 0;
+    }
+  }
 }
 
 @media (max-width: 830px) {
@@ -389,7 +405,7 @@ article {
     }
 
     p {
-      font-size: 14px;
+      font-size: 15px;
     }
   }
 }
