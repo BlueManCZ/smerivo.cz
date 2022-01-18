@@ -57,6 +57,10 @@ body {
   position: relative;
 }
 
+#title-logo {
+  display: none;
+}
+
 #top-panel {
   text-align: center;
 
@@ -108,6 +112,7 @@ h2 {
   text-transform: uppercase;
   color: grey;
   font-weight: bold;
+  font-size: 24px;
 }
 
 nav {
@@ -346,4 +351,45 @@ article {
   font-size: 19px;
   margin: 0 auto auto;
   max-width: 590px;
+}
+
+@media (max-width: 830px) {
+  .white-wrapper {
+    padding-bottom: 40px;
+
+    #title-background {
+      display: none;
+    }
+
+    #title-logo {
+      width: 80%;
+      display: block;
+      margin: 40px auto;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: calc(100vw / 25);
+  }
+
+  .about {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .profile {
+      width: 80px;
+      margin-right: 20px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
 }
