@@ -51,7 +51,7 @@
         "company": "Teo via nadační fond",
         "role": "Designér a\u00A0vývojář webových aplikací",
         "period": "2023",
-        "description": "Design a\u00A0vývoj webových aplikací DONACE.CZ a\u00A0FUNDACE.CZ v\u00A0TypeScriptu a\u00A0Reactu pro nadační fond.",
+        "description": "Design a\u00A0vývoj webových aplikací DONACE.CZ a\u00A0FUNDACE.CZ v\u00A0Next.js.",
         "technologies": ["Next.js", "TypeScript", "React", "SCSS"]
       },
       {

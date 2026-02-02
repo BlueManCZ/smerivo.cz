@@ -51,7 +51,7 @@
         "company": "Teo Via Endowment Fund",
         "role": "Web Application Designer & Developer",
         "period": "2023",
-        "description": "Designing and developing DONACE.CZ and FUNDACE.CZ web applications in TypeScript and React for a endowment fund.",
+        "description": "Designing and developing DONACE.CZ and FUNDACE.CZ web applications in Next.js.",
         "technologies": ["Next.js", "TypeScript", "React", "SCSS"]
       },
       {

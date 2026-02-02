@@ -17,7 +17,7 @@ export default function Skills() {
     },
     {
       category: t.skills.frontend,
-      items: ["Tailwind", "shadcn/ui", "SASS/SCSS"],
+      items: ["React", "shadcn/ui", "Tailwind CSS"],
     },
     {
       category: t.skills.tools,

@@ -22,8 +22,8 @@ const socials = [
     href: "https://www.instagram.com/ivo.smerek",
   },
   {
-    label: "Twitter",
-    href: "https://twitter.com/ivo_smerek",
+    label: "X",
+    href: "https://x.com/ivo_smerek",
   },
 ];
 

@@ -63,7 +63,22 @@ export default function Experience() {
                       </p>
 
                       <p className="mt-3 leading-relaxed text-secondary">
-                        {item.description}
+                        {item.description
+                          .split(/(DONACE\.CZ|FUNDACE\.CZ)/g)
+                          .map((part) => {
+                            if (part === "DONACE.CZ" || part === "FUNDACE.CZ")
+                              return (
+                                <a
+                                  href={`https://${part.toLowerCase()}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-accent underline underline-offset-4 transition-colors hover:text-foreground"
+                                >
+                                  {part}
+                                </a>
+                              );
+                            return part;
+                          })}
                       </p>
 
                       <div className="mt-4 flex flex-wrap gap-2">
