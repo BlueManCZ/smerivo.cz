@@ -78,31 +78,37 @@
     "article": "Article",
     "items": [
       {
+        "key": "kiosk",
         "title": "St. Maurice Church — Kiosk",
         "subtitle": "St. Maurice Parish Olomouc",
         "description": "Interactive touchscreen application running in St. Maurice Church and its tower in Olomouc. Presents the church's history, organs, community life, and donation options — featuring a 3D model viewer, photo gallery, and video content in two languages."
       },
       {
+        "key": "donace",
         "title": "DONACE.CZ",
         "subtitle": "Teo via Foundation Fund",
         "description": "A full-stack donation and fundraising platform built as a monorepo with a public donation portal."
       },
       {
+        "key": "moric",
         "title": "Sv. Moric Olomouc",
         "subtitle": "St. Maurice Parish Olomouc",
         "description": "Redesign and migration of the original parish website to modern technologies. A second website was also created for the St. Maurice organs, featuring an organ pipe adoption application."
       },
       {
+        "key": "okno",
         "title": "Okno do Praxe",
         "subtitle": "Palacky University Olomouc",
         "description": "Job fair website for Palacky University connecting employers and students. I continue to participate in preparing new editions of the event."
       },
       {
+        "key": "colidocs",
         "title": "Colidocs",
         "subtitle": "Bachelor's thesis",
         "description": "A fork of Quickdocs with new design, GitHub authentication, and symbol usage examples. Exploring Lisp documentation."
       },
       {
+        "key": "jedeme",
         "title": "Jedeme Online",
         "subtitle": "Project Jedeme v\u00A0tom společně",
         "description": "Web application for the now-defunct project Jedeme v\u00A0tom společně. The project aimed to engage seniors in retirement homes through competitive group physical activity — riding stationary bikes."

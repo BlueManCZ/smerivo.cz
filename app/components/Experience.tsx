@@ -69,6 +69,7 @@ export default function Experience() {
                             if (part === "DONACE.CZ" || part === "FUNDACE.CZ")
                               return (
                                 <a
+                                  key={part}
                                   href={`https://${part.toLowerCase()}`}
                                   target="_blank"
                                   rel="noopener noreferrer"

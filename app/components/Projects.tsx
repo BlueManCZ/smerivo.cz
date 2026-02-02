@@ -3,8 +3,13 @@
 import { useTranslations } from "../i18n/context";
 import AnimatedSection from "./AnimatedSection";
 
-const projectsMeta = [
-  {
+const projectsMeta: Record<string, {
+  url?: string;
+  articleUrl?: string;
+  tech: { name: string; url: string }[];
+  year: string;
+}> = {
+  kiosk: {
     tech: [
       { name: "Svelte", url: "https://svelte.dev/" },
       { name: "Tauri", url: "https://tauri.app/" },
@@ -13,7 +18,7 @@ const projectsMeta = [
     ],
     year: "2025",
   },
-  {
+  donace: {
     url: "https://donace.cz/",
     tech: [
       { name: "Next.js", url: "https://nextjs.org/" },
@@ -23,17 +28,7 @@ const projectsMeta = [
     ],
     year: "2024",
   },
-  {
-    url: "https://www.oknodopraxe.upol.cz",
-    tech: [
-      { name: "Django", url: "https://www.djangoproject.com/" },
-      { name: "Python", url: "https://www.python.org/" },
-      { name: "Bootstrap", url: "https://getbootstrap.com/" },
-      { name: "SASS", url: "https://sass-lang.com/" },
-    ],
-    year: "2021",
-  },
-  {
+  moric: {
     url: "https://www.moric-olomouc.cz",
     articleUrl:
       "https://www.zurnal.upol.cz/nc/en/news/clanek/studenti-prf-vytvorili-webove-stranky-kostela-svateho-morice-i-unikatnich-englerovych-varhan/",
@@ -46,7 +41,17 @@ const projectsMeta = [
     ],
     year: "2019",
   },
-  {
+  okno: {
+    url: "https://www.oknodopraxe.upol.cz",
+    tech: [
+      { name: "Django", url: "https://www.djangoproject.com/" },
+      { name: "Python", url: "https://www.python.org/" },
+      { name: "Bootstrap", url: "https://getbootstrap.com/" },
+      { name: "SASS", url: "https://sass-lang.com/" },
+    ],
+    year: "2021",
+  },
+  colidocs: {
     tech: [
       { name: "Caveman 2", url: "https://8arrow.org/caveman/" },
       { name: "Common Lisp", url: "https://lisp-lang.org/" },
@@ -58,7 +63,7 @@ const projectsMeta = [
     ],
     year: "2019",
   },
-  {
+  jedeme: {
     articleUrl:
       "https://www.denik.cz/spolecnost/jedeme-v-tom-spolecne-3-aneb-po-vlastech-ceskoslovenskych-20180222.html",
     tech: [
@@ -68,7 +73,7 @@ const projectsMeta = [
     ],
     year: "2018",
   },
-];
+};
 
 export default function Projects() {
   const t = useTranslations();
@@ -100,8 +105,10 @@ export default function Projects() {
           {/* Project cards */}
           <div className="md:col-span-8 lg:col-span-8 lg:col-start-5">
             <div className="flex flex-col gap-6">
-              {t.projects.items.map((project, i) => (
-                <AnimatedSection key={project.title} delay={i * 0.1}>
+              {t.projects.items.map((project, i) => {
+                const meta = projectsMeta[project.key];
+                return (
+                <AnimatedSection key={project.key} delay={i * 0.1}>
                   <article className="project-card group p-6 lg:p-8">
                     {/* Top row: year + title */}
                     <div className="flex items-start justify-between gap-4">
@@ -110,9 +117,9 @@ export default function Projects() {
                           className="text-2xl tracking-tight transition-colors group-hover:text-accent lg:text-3xl"
                           style={{ fontFamily: "var(--font-display)" }}
                         >
-                          {projectsMeta[i].url ? (
+                          {meta.url ? (
                             <a
-                              href={projectsMeta[i].url}
+                              href={meta.url}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
@@ -127,9 +134,9 @@ export default function Projects() {
                         </p>
                       </div>
                       <div className="flex shrink-0 items-center gap-3">
-                        {"articleUrl" in projectsMeta[i] && (
+                        {meta.articleUrl && (
                           <a
-                            href={projectsMeta[i].articleUrl}
+                            href={meta.articleUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-1.5 font-mono text-[0.65rem] uppercase tracking-[0.15em] text-muted transition-colors hover:text-foreground"
@@ -138,9 +145,9 @@ export default function Projects() {
                             <span>↗</span>
                           </a>
                         )}
-                        {projectsMeta[i].url && (
+                        {meta.url && (
                           <a
-                            href={projectsMeta[i].url}
+                            href={meta.url}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-1.5 font-mono text-[0.65rem] uppercase tracking-[0.15em] text-accent transition-colors hover:text-foreground"
@@ -152,7 +159,7 @@ export default function Projects() {
                           </a>
                         )}
                         <span className="font-mono text-xs text-muted">
-                          {projectsMeta[i].year}
+                          {meta.year}
                         </span>
                       </div>
                     </div>
@@ -164,7 +171,7 @@ export default function Projects() {
 
                     {/* Tech tags */}
                     <div className="mt-5 flex flex-wrap gap-2">
-                      {projectsMeta[i].tech.map((tech, tIdx) => (
+                      {meta.tech.map((tech, tIdx) => (
                         <span
                           key={tech.name}
                           className="font-mono text-[0.65rem] uppercase tracking-[0.15em]"
@@ -177,7 +184,7 @@ export default function Projects() {
                           >
                             {tech.name}
                           </a>
-                          {tIdx < projectsMeta[i].tech.length - 1 && (
+                          {tIdx < meta.tech.length - 1 && (
                             <span className="ml-2 text-border">/</span>
                           )}
                         </span>
@@ -185,7 +192,8 @@ export default function Projects() {
                     </div>
                   </article>
                 </AnimatedSection>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>

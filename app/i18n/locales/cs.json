@@ -78,31 +78,37 @@
     "article": "Článek",
     "items": [
       {
+        "key": "kiosk",
         "title": "Kostel sv. Mořice — Kiosk",
         "subtitle": "Farnost sv. Mořice Olomouc",
         "description": "Interaktivní aplikace běžící na dotykových obrazovkách v\u00A0kostele a\u00A0věži sv. Mořice v\u00A0Olomouci. Představuje historii kostela, varhany, komunitu a\u00A0možnosti darování — včetně 3D modelu, galerie a\u00A0videí ve dvou jazycích."
       },
       {
+        "key": "donace",
         "title": "DONACE.CZ",
         "subtitle": "Teo via nadační fond",
         "description": "Full-stack platforma pro dárcovství a\u00A0fundraising postavená jako monorepo s\u00A0veřejným dárcovským portálem."
       },
       {
+        "key": "moric",
         "title": "Sv. Mořic Olomouc",
         "subtitle": "Farnost sv. Mořice Olomouc",
         "description": "Redesign a\u00A0přestavba původního farního webu na novější technologie. Současně vznikl i\u00A0druhý web pro Svatomořické varhany, na kterém byla mimo jiné spuštěna aplikace pro adopci píšťal."
       },
       {
+        "key": "okno",
         "title": "Okno do Praxe",
         "subtitle": "Univerzita Palackého v\u00A0Olomouci",
         "description": "Web veletrhu práce Univerzity Palackého, který propojuje zaměstnavatele se studenty. Podílím se na přípravě nových ročníků akce."
       },
       {
+        "key": "colidocs",
         "title": "Colidocs",
         "subtitle": "Bakalářská práce",
         "description": "Fork Quickdocs s\u00A0novým designem, přihlášením přes GitHub a\u00A0ukázkami použití symbolů."
       },
       {
+        "key": "jedeme",
         "title": "Jedeme Online",
         "subtitle": "Projekt Jedeme v\u00A0tom společně",
         "description": "Webová aplikace již zaniklého projektu Jedeme v\u00A0tom společně. Projekt měl za cíl aktivizovat seniory v\u00A0domovech soutěživou formou společné fyzické aktivity — jízdy na rotopedech."

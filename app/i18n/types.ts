@@ -61,6 +61,7 @@ export interface Translations {
     visit: string;
     article: string;
     items: {
+      key: string;
       title: string;
       subtitle: string;
       description: string;
