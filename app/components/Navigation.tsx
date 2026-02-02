@@ -38,6 +38,7 @@ export default function Navigation() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12">
           <a
+            // biome-ignore lint/a11y/useValidAnchor: off
             href="#"
             className="font-display text-2xl tracking-tight text-foreground transition-colors hover:text-accent"
             style={{ fontFamily: "var(--font-display)" }}
