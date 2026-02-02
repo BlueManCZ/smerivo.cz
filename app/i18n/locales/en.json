@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "title": "Ivo Šmerek — Programmer & Designer",
+    "description": "Portfolio of Ivo Šmerek. 10+ years crafting web experiences with TypeScript and Python. Based in Olomouc, Czech Republic.",
+    "ogDescription": "10+ years crafting web experiences with TypeScript and Python."
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "Programmer & Designer",
+    "description": "Crafting web experiences for over a decade.",
+    "descriptionLine2": "TypeScript and Python — from Olomouc to the world.",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "number": "01",
+    "title": "About",
+    "intro": "I'm a programmer and designer with ",
+    "introHighlight": "over 10 years of professional experience",
+    "introEnd": " building web applications that people actually enjoy using.",
+    "education": "I hold both a Bachelor's and Master's degree in ",
+    "educationHighlight": "Applied Informatics",
+    "educationEnd": " with a specialization in software development from Palacky University's Faculty of Science in Olomouc. My academic background combined with years of real-world experience has shaped a pragmatic approach to building software.",
+    "current": "Currently, I work as a programmer for ",
+    "currentHighlight": "Teo via nadační fond",
+    "currentEnd": ". Right now I'm most excited about Next.js, React, and leveraging AI agents for work. I'm a big fan of open-source technologies and try to contribute to their development.",
+    "statsYears": "Years Exp.",
+    "statsDegreeValue": "MSc.",
+    "statsDegree": "Degree",
+    "statsLocation": "Olomouc"
+  },
+  "skills": {
+    "number": "02",
+    "title": "Skills",
+    "languages": "Languages",
+    "frameworks": "Frameworks",
+    "frontend": "Frontend",
+    "tools": "Tools"
+  },
+  "experience": {
+    "number": "03",
+    "title": "Experience",
+    "present": "present",
+    "items": [
+      {
+        "company": "Teo Via Endowment Fund",
+        "role": "Web Application Designer & Developer",
+        "period": "2023",
+        "description": "Designing and developing DONACE.CZ and FUNDACE.CZ web applications in TypeScript and React for a endowment fund.",
+        "technologies": ["Next.js", "TypeScript", "React", "SCSS"]
+      },
+      {
+        "company": "TESCO SW a.s.",
+        "role": "Programmer",
+        "period": "2021 – 2024",
+        "description": "Building frontend solutions in React and TypeScript for enterprise clients.",
+        "technologies": ["React", "TypeScript", "LESS"]
+      },
+      {
+        "company": "Lingua Centrum jazyková škola",
+        "role": "Programmer",
+        "period": "2022 – 2024",
+        "description": "Managing and developing internal systems on Linux using Java.",
+        "technologies": ["Java", "Linux", "PostgreSQL"]
+      }
+    ]
+  },
+  "projects": {
+    "number": "04",
+    "title": "Selected",
+    "titleLine2": "Work",
+    "visit": "Visit",
+    "article": "Article",
+    "items": [
+      {
+        "title": "St. Maurice Church — Kiosk",
+        "subtitle": "St. Maurice Parish Olomouc",
+        "description": "Interactive touchscreen application running in St. Maurice Church and its tower in Olomouc. Presents the church's history, organs, community life, and donation options — featuring a 3D model viewer, photo gallery, and video content in two languages."
+      },
+      {
+        "title": "DONACE.CZ",
+        "subtitle": "Teo via Foundation Fund",
+        "description": "A full-stack donation and fundraising platform built as a monorepo with a public donation portal."
+      },
+      {
+        "title": "Sv. Moric Olomouc",
+        "subtitle": "St. Maurice Parish Olomouc",
+        "description": "Redesign and migration of the original parish website to modern technologies. A second website was also created for the St. Maurice organs, featuring an organ pipe adoption application."
+      },
+      {
+        "title": "Okno do Praxe",
+        "subtitle": "Palacky University Olomouc",
+        "description": "Job fair website for Palacky University connecting employers and students. I continue to participate in preparing new editions of the event."
+      },
+      {
+        "title": "Colidocs",
+        "subtitle": "Bachelor's thesis",
+        "description": "A fork of Quickdocs with new design, GitHub authentication, and symbol usage examples. Exploring Lisp documentation."
+      },
+      {
+        "title": "Jedeme Online",
+        "subtitle": "Project Jedeme v\u00A0tom společně",
+        "description": "Web application for the now-defunct project Jedeme v\u00A0tom společně. The project aimed to engage seniors in retirement homes through competitive group physical activity — riding stationary bikes."
+      }
+    ]
+  },
+  "contact": {
+    "number": "05",
+    "titleLine1": "Let's work",
+    "titleLine2": "together.",
+    "description": "Have a project in mind or just want to say hello? I'd love to help you bring your vision to life.",
+    "footer": "Ivo Šmerek",
+    "location": "Olomouc, Czech Republic"
+  }
+}

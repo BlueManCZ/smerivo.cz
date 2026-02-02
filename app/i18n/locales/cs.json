@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "title": "Ivo Šmerek — Programátor & Designer",
+    "description": "Portfolio Ivo Šmerka. Přes 10 let zkušeností s\u00A0tvorbou webu v\u00A0TypeScriptu a\u00A0Pythonu. Olomouc, Česká republika.",
+    "ogDescription": "Přes 10 let zkušeností s\u00A0tvorbou webu v\u00A0TypeScriptu a\u00A0Pythonu."
+  },
+  "nav": {
+    "about": "O\u00A0mně",
+    "skills": "Dovednosti",
+    "experience": "Zkušenosti",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "subtitle": "Programátor & Designer",
+    "description": "Přes deset let se věnuji tvorbě webu.",
+    "descriptionLine2": "TypeScript a\u00A0Python — z\u00A0Olomouce do světa.",
+    "scroll": "Níže"
+  },
+  "about": {
+    "number": "01",
+    "title": "O\u00A0mně",
+    "intro": "Jsem programátor a\u00A0designer s\u00A0",
+    "introHighlight": "více než 10 lety praxe",
+    "introEnd": ". Stavím webové aplikace, které lidi skutečně baví používat.",
+    "education": "Vystudoval jsem bakaláře i\u00A0magistra v\u00A0oboru ",
+    "educationHighlight": "Aplikovaná informatika",
+    "educationEnd": " se zaměřením na vývoj software na Přírodovědecké fakultě Univerzity Palackého v\u00A0Olomouci. Studium a\u00A0roky praxe mi daly pragmatický pohled na tvorbu softwaru.",
+    "current": "Aktuálně pracuji jako programátor pro ",
+    "currentHighlight": "Teo via nadační fond",
+    "currentEnd": ". Nejvíc mě teď baví Next.js, React a\u00A0využití AI agentů pro práci. Jsem fanoušek open-source technologií a\u00A0snažím se přispívat jejich vývojem.",
+    "statsYears": "Let praxe",
+    "statsDegreeValue": "Mgr.",
+    "statsDegree": "Titul",
+    "statsLocation": "Olomouc"
+  },
+  "skills": {
+    "number": "02",
+    "title": "Dovednosti",
+    "languages": "Jazyky",
+    "frameworks": "Frameworky",
+    "frontend": "Frontend",
+    "tools": "Nástroje"
+  },
+  "experience": {
+    "number": "03",
+    "title": "Zkušenosti",
+    "present": "současnost",
+    "items": [
+      {
+        "company": "Teo via nadační fond",
+        "role": "Designér a\u00A0vývojář webových aplikací",
+        "period": "2023",
+        "description": "Design a\u00A0vývoj webových aplikací DONACE.CZ a\u00A0FUNDACE.CZ v\u00A0TypeScriptu a\u00A0Reactu pro nadační fond.",
+        "technologies": ["Next.js", "TypeScript", "React", "SCSS"]
+      },
+      {
+        "company": "TESCO SW a.s.",
+        "role": "Programátor",
+        "period": "2021 – 2024",
+        "description": "Tvorba frontendových řešení v\u00A0Reactu a\u00A0TypeScriptu pro enterprise klienty.",
+        "technologies": ["React", "TypeScript", "LESS"]
+      },
+      {
+        "company": "Lingua Centrum jazyková škola",
+        "role": "Programátor",
+        "period": "2022 – 2024",
+        "description": "Správa a\u00A0vývoj interních systémů na Linuxu s\u00A0využitím Javy.",
+        "technologies": ["Java", "Linux", "PostgreSQL"]
+      }
+    ]
+  },
+  "projects": {
+    "number": "04",
+    "title": "Vybrané",
+    "titleLine2": "Projekty",
+    "visit": "Navštívit",
+    "article": "Článek",
+    "items": [
+      {
+        "title": "Kostel sv. Mořice — Kiosk",
+        "subtitle": "Farnost sv. Mořice Olomouc",
+        "description": "Interaktivní aplikace běžící na dotykových obrazovkách v\u00A0kostele a\u00A0věži sv. Mořice v\u00A0Olomouci. Představuje historii kostela, varhany, komunitu a\u00A0možnosti darování — včetně 3D modelu, galerie a\u00A0videí ve dvou jazycích."
+      },
+      {
+        "title": "DONACE.CZ",
+        "subtitle": "Teo via nadační fond",
+        "description": "Full-stack platforma pro dárcovství a\u00A0fundraising postavená jako monorepo s\u00A0veřejným dárcovským portálem."
+      },
+      {
+        "title": "Sv. Mořic Olomouc",
+        "subtitle": "Farnost sv. Mořice Olomouc",
+        "description": "Redesign a\u00A0přestavba původního farního webu na novější technologie. Současně vznikl i\u00A0druhý web pro Svatomořické varhany, na kterém byla mimo jiné spuštěna aplikace pro adopci píšťal."
+      },
+      {
+        "title": "Okno do Praxe",
+        "subtitle": "Univerzita Palackého v\u00A0Olomouci",
+        "description": "Web veletrhu práce Univerzity Palackého, který propojuje zaměstnavatele se studenty. Podílím se na přípravě nových ročníků akce."
+      },
+      {
+        "title": "Colidocs",
+        "subtitle": "Bakalářská práce",
+        "description": "Fork Quickdocs s\u00A0novým designem, přihlášením přes GitHub a\u00A0ukázkami použití symbolů."
+      },
+      {
+        "title": "Jedeme Online",
+        "subtitle": "Projekt Jedeme v\u00A0tom společně",
+        "description": "Webová aplikace již zaniklého projektu Jedeme v\u00A0tom společně. Projekt měl za cíl aktivizovat seniory v\u00A0domovech soutěživou formou společné fyzické aktivity — jízdy na rotopedech."
+      }
+    ]
+  },
+  "contact": {
+    "number": "05",
+    "titleLine1": "Pojďme",
+    "titleLine2": "spolupracovat.",
+    "description": "Máte nápad na projekt, nebo si chcete jen popovídat? Rád vám pomůžu uskutečnit vaše vize.",
+    "footer": "Ivo Šmerek",
+    "location": "Olomouc, Česká republika"
+  }
+}
