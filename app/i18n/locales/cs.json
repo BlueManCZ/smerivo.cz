@@ -9,6 +9,7 @@
     "skills": "Dovednosti",
     "experience": "Zkušenosti",
     "projects": "Projekty",
+    "pricing": "Ceník",
     "contact": "Kontakt"
   },
   "hero": {
@@ -115,12 +116,63 @@
       }
     ]
   },
-  "contact": {
+  "pricing": {
     "number": "05",
+    "title": "Projektová",
+    "titleLine2": "Kalkulačka",
+    "description": "Získejte orientační odhad ceny vašeho projektu. Zvolte rozsah, přidejte funkce a\u00A0sledujte cenu v\u00A0reálném čase.",
+    "tierLabel": "Rozsah projektu",
+    "addonsLabel": "Funkce a\u00A0moduly",
+    "from": "od",
+    "currency": "Kč",
+    "estimate": "Odhadovaná cena",
+    "total": "Celkem",
+    "disclaimer": "Jedná se o\u00A0nezávazný orientační odhad. Konečná cena závisí na konkrétních požadavcích a\u00A0složitosti projektu. Pojďme si o\u00A0detailech promluvit — napište mi na ",
+    "disclaimerEnd": ".",
+    "designReady": "Mám hotový kompletní design",
+    "designReadyHint": "Figma, Sketch nebo detailní makety připravené k\u00A0implementaci",
+    "designDiscount": "Sleva za hotový design",
+    "nonprofit": "Jsem nezisková organizace",
+    "nonprofitHint": "Nadace, spolek, církev nebo jiná neziskovka",
+    "nonprofitDiscount": "Sleva pro neziskové organizace",
+    "tiers": {
+      "landing": {
+        "name": "Vizitka",
+        "description": "Jednostránkový web ideální pro představení produktu, události nebo osobní prezentaci. Responzivní, rychlý a\u00A0zaměřený na jeden jasný cíl."
+      },
+      "business": {
+        "name": "Firemní web",
+        "description": "Vícestránkový web se strukturovaným obsahem, responzivním designem a\u00A0profesionálním vzhledem. Ideální pro firmy, studia nebo freelancery."
+      },
+      "application": {
+        "name": "Webová aplikace",
+        "description": "Interaktivní aplikace s\u00A0dynamickým obsahem, uživatelskými scénáři a\u00A0vlastní funkcionalitou. Dashboardy, portály nebo rezervační systémy."
+      },
+      "corporate": {
+        "name": "Korporátní systém",
+        "description": "Komplexní enterprise platforma s\u00A0více integracemi, správou rolí a\u00A0škálovatelnou architekturou. Pro náročné firemní potřeby."
+      }
+    },
+    "addons": {
+      "contactForm": "Kontaktní formulář",
+      "database": "Databáze a\u00A0admin panel",
+      "localization": "Vícejazyčná podpora",
+      "seo": "SEO optimalizace",
+      "analytics": "Analytika a\u00A0tracking",
+      "blog": "Blog / CMS",
+      "ecommerce": "E-shop a\u00A0platby",
+      "auth": "Uživatelská autentizace",
+      "api": "API integrace"
+    }
+  },
+  "contact": {
+    "number": "06",
     "titleLine1": "Pojďme",
     "titleLine2": "spolupracovat.",
     "description": "Máte nápad na projekt, nebo si chcete jen popovídat? Rád vám pomůžu uskutečnit vaše vize.",
-    "footer": "Ivo Šmerek",
+    "footer": "Mgr. Ivo Šmerek",
+    "ico": "IČO: 19504004",
+    "legalNote": "Fyzická osoba zapsaná v\u00A0živnostenském rejstříku.",
     "location": "Olomouc, Česká republika"
   }
 }

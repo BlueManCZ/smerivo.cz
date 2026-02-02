@@ -6,6 +6,10 @@ import { useTranslations } from "../i18n/context";
 
 const socials = [
   {
+    label: "Email",
+    href: "mailto:ivo.smerek@gmail.com",
+  },
+  {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/ivosmerek",
   },
@@ -89,8 +93,16 @@ export default function Contact() {
       <div className="mx-auto mt-32 max-w-7xl border-t border-border pt-8">
         <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
           <span className="font-mono text-xs text-muted">
-            &copy; {new Date().getFullYear()} {t.contact.footer}
+            &copy; {new Date().getFullYear()} {t.contact.footer} &middot; {t.contact.ico}
+            <br />
+            {t.contact.legalNote}
           </span>
+          <a
+            href="mailto:ivo.smerek@gmail.com"
+            className="font-mono text-xs text-muted transition-colors hover:text-accent"
+          >
+            ivo.smerek@gmail.com
+          </a>
           <span className="font-mono text-xs text-muted">
             {t.contact.location}
           </span>

@@ -9,12 +9,16 @@ export default function Navigation() {
   const t = useTranslations();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  const sectionIds = ["about", "skills", "experience", "projects", "pricing", "contact"];
 
   const links = [
     { label: t.nav.about, href: "#about" },
     { label: t.nav.skills, href: "#skills" },
     { label: t.nav.experience, href: "#experience" },
     { label: t.nav.projects, href: "#projects" },
+    { label: t.nav.pricing, href: "#pricing" },
     { label: t.nav.contact, href: "#contact" },
   ];
 
@@ -22,6 +26,26 @@ export default function Navigation() {
     const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        }
+      },
+      { rootMargin: "-40% 0px -55% 0px" },
+    );
+
+    for (const id of sectionIds) {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -52,7 +76,9 @@ export default function Navigation() {
               <a
                 key={link.href}
                 href={link.href}
-                className="font-mono text-xs uppercase tracking-[0.2em] text-muted transition-colors hover:text-accent"
+                className={`font-mono text-xs uppercase tracking-[0.2em] transition-colors hover:text-accent ${
+                  activeSection === link.href.slice(1) ? "text-accent" : "text-muted"
+                }`}
               >
                 {link.label}
               </a>
@@ -95,7 +121,9 @@ export default function Navigation() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
-                className="text-3xl tracking-tight text-foreground transition-colors hover:text-accent"
+                className={`text-3xl tracking-tight transition-colors hover:text-accent ${
+                  activeSection === link.href.slice(1) ? "text-accent" : "text-foreground"
+                }`}
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 {link.label}

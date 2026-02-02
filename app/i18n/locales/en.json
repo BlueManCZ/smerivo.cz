@@ -9,6 +9,7 @@
     "skills": "Skills",
     "experience": "Experience",
     "projects": "Projects",
+    "pricing": "Pricing",
     "contact": "Contact"
   },
   "hero": {
@@ -115,12 +116,63 @@
       }
     ]
   },
-  "contact": {
+  "pricing": {
     "number": "05",
+    "title": "Project",
+    "titleLine2": "Calculator",
+    "description": "Get a rough estimate for your project. Choose a base scope, add the features you need, and see the price update in real time.",
+    "tierLabel": "Project scope",
+    "addonsLabel": "Features & modules",
+    "from": "from",
+    "currency": "CZK",
+    "estimate": "Estimated price",
+    "total": "Total",
+    "disclaimer": "This is a non-binding estimate for orientation purposes. The final price depends on the specific requirements and complexity of your project. Let's talk about the details — reach me at ",
+    "disclaimerEnd": ".",
+    "designReady": "I already have a complete design",
+    "designReadyHint": "Figma, Sketch, or detailed mockups ready for implementation",
+    "designDiscount": "Design-ready discount",
+    "nonprofit": "I'm a nonprofit organization",
+    "nonprofitHint": "Foundation, association, church, or other nonprofit",
+    "nonprofitDiscount": "Nonprofit discount",
+    "tiers": {
+      "landing": {
+        "name": "Landing Page",
+        "description": "A single-page website perfect for product launches, events, or personal presentation. Responsive, fast, and focused on one clear goal."
+      },
+      "business": {
+        "name": "Business Website",
+        "description": "A multi-page website with structured content, responsive design, and a professional look. Ideal for companies, studios, or freelancers."
+      },
+      "application": {
+        "name": "Web Application",
+        "description": "An interactive application with dynamic content, user flows, and custom functionality. Think dashboards, portals, or booking systems."
+      },
+      "corporate": {
+        "name": "Corporate System",
+        "description": "A complex, enterprise-grade platform with multiple integrations, role-based access, and scalable architecture. Built for serious business needs."
+      }
+    },
+    "addons": {
+      "contactForm": "Contact Form",
+      "database": "Database & Admin Panel",
+      "localization": "Multi-language Support",
+      "seo": "SEO Optimization",
+      "analytics": "Analytics & Tracking",
+      "blog": "Blog / CMS",
+      "ecommerce": "E-commerce & Payments",
+      "auth": "User Authentication",
+      "api": "API Integration"
+    }
+  },
+  "contact": {
+    "number": "06",
     "titleLine1": "Let's work",
     "titleLine2": "together.",
     "description": "Have a project in mind or just want to say hello? I'd love to help you bring your vision to life.",
-    "footer": "Ivo Šmerek",
+    "footer": "Mgr. Ivo Šmerek",
+    "ico": "ID: 19504004",
+    "legalNote": "Sole proprietor registered in the Trade Register.",
     "location": "Olomouc, Czech Republic"
   }
 }
