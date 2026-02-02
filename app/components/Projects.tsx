@@ -39,7 +39,7 @@ const projectsMeta: Record<string, {
       { name: "Leaflet", url: "https://leafletjs.com/" },
       { name: "SASS", url: "https://sass-lang.com/" },
     ],
-    year: "2019",
+    year: "2021",
   },
   okno: {
     url: "https://www.oknodopraxe.upol.cz",
@@ -49,7 +49,7 @@ const projectsMeta: Record<string, {
       { name: "Bootstrap", url: "https://getbootstrap.com/" },
       { name: "SASS", url: "https://sass-lang.com/" },
     ],
-    year: "2021",
+    year: "2019",
   },
   colidocs: {
     tech: [
