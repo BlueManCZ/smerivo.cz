@@ -1,5 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
-import { locales, defaultLocale } from "./app/i18n/config";
+import { locales } from "./app/i18n/config";
+import { detectLocale } from "./app/i18n/detectLocale";
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -20,19 +21,16 @@ export function proxy(request: NextRequest) {
   }
 
   // Determine locale: cookie → Accept-Language → default
-  let locale = defaultLocale;
+  let locale: string;
 
   const cookieLocale = request.cookies.get("locale")?.value;
-  if (cookieLocale && locales.includes(cookieLocale as typeof locale)) {
-    locale = cookieLocale as typeof locale;
+  if (
+    cookieLocale &&
+    locales.includes(cookieLocale as (typeof locales)[number])
+  ) {
+    locale = cookieLocale;
   } else {
-    const acceptLang = request.headers.get("accept-language") ?? "";
-    for (const l of locales) {
-      if (acceptLang.includes(l)) {
-        locale = l;
-        break;
-      }
-    }
+    locale = detectLocale(request.headers.get("accept-language") ?? "");
   }
 
   const url = request.nextUrl.clone();
