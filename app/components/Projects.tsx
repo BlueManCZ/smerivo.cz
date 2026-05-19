@@ -47,6 +47,7 @@ const projectsMeta: Record<string, {
       { name: "Django", url: "https://www.djangoproject.com/" },
       { name: "Python", url: "https://www.python.org/" },
       { name: "Bootstrap", url: "https://getbootstrap.com/" },
+      { name: "Leaflet", url: "https://leafletjs.com/" },
       { name: "SASS", url: "https://sass-lang.com/" },
     ],
     year: "2019",
