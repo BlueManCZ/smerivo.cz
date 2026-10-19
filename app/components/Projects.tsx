@@ -9,6 +9,17 @@ const projectsMeta: Record<string, {
   tech: { name: string; url: string }[];
   year: string;
 }> = {
+  tpkma: {
+    url: "https://tpkma.upol.cz/",
+    tech: [
+      { name: "Next.js", url: "https://nextjs.org/" },
+      { name: "TypeScript", url: "https://www.typescriptlang.org/" },
+      { name: "Tailwind CSS", url: "https://tailwindcss.com/" },
+      { name: "Drizzle ORM", url: "https://orm.drizzle.team/" },
+      { name: "Tiptap", url: "https://tiptap.dev/" },
+    ],
+    year: "2026",
+  },
   topmar: {
     url: "https://topmar.cz/",
     tech: [
