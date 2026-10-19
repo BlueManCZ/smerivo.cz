@@ -79,6 +79,12 @@
     "article": "Článek",
     "items": [
       {
+        "key": "tpkma",
+        "title": "Technologická platforma KMA",
+        "subtitle": "Univerzita Palackého v\u00A0Olomouci",
+        "description": "Redesign a\u00A0přestavba webu technologické platformy Katedry matematické analýzy a\u00A0aplikací matematiky. Dvojjazyčný veřejný web (CZ/EN) nad vlastním redakčním systémem — novinky, kalendář akcí, stránky, kontakty, partneři a\u00A0řešení pro firmy, s\u00A0editorem formátovaného textu, fulltextovým vyhledáváním a\u00A0volitelným překladem mezi jazyky pomocí AI."
+      },
+      {
         "key": "topmar",
         "title": "TOPMAR.CZ",
         "subtitle": "TOP MaR building s.r.o.",

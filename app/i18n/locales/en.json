@@ -79,6 +79,12 @@
     "article": "Article",
     "items": [
       {
+        "key": "tpkma",
+        "title": "KMA Technology Platform",
+        "subtitle": "Palacky University Olomouc",
+        "description": "Redesign and rebuild of the website for the technology platform of the Department of Mathematical Analysis and Applications of Mathematics. A bilingual CZ/EN public site backed by a custom CMS — news, event calendar, pages, contacts, partners and solutions, with a rich-text editor, full-text search and optional AI-assisted translation between both languages."
+      },
+      {
         "key": "topmar",
         "title": "TOPMAR.CZ",
         "subtitle": "TOP MaR building s.r.o.",
