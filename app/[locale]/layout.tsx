@@ -46,6 +46,8 @@ export default async function LocaleLayout({
   const translations = translationMap[locale as Locale];
 
   return (
-    <I18nProvider translations={translations}>{children}</I18nProvider>
+    <I18nProvider locale={locale as Locale} translations={translations}>
+      {children}
+    </I18nProvider>
   );
 }

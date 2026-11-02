@@ -2,39 +2,75 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import { useMemo, useRef, useState } from "react";
-import { useTranslations } from "../i18n/context";
+import type { Locale } from "../i18n/config";
+import { useLocale, useTranslations } from "../i18n/context";
+import type { Translations } from "../i18n/types";
 import AnimatedSection from "./AnimatedSection";
 
 type Tier = "landing" | "business" | "application" | "corporate";
+type Currency = keyof Translations["pricing"]["currencies"];
 
-const tierPrices: Record<Tier, number> = {
-  landing: 15000,
-  business: 35000,
-  application: 70000,
-  corporate: 150000,
+const currencies = ["CZK", "EUR"] as const satisfies Currency[];
+
+const defaultCurrencies: Record<Locale, Currency> = {
+  cs: "CZK",
+  en: "EUR",
 };
 
-const addonPrices: Record<string, number> = {
-  contactForm: 3000,
-  database: 20000,
-  localization: 8000,
-  seo: 5000,
-  analytics: 3000,
-  blog: 15000,
-  ecommerce: 25000,
-  auth: 12000,
-  api: 10000,
+const priceLists: Record<
+  Currency,
+  { tiers: Record<Tier, number>; addons: Record<string, number> }
+> = {
+  CZK: {
+    tiers: {
+      landing: 15000,
+      business: 35000,
+      application: 70000,
+      corporate: 150000,
+    },
+    addons: {
+      contactForm: 3000,
+      database: 20000,
+      localization: 8000,
+      seo: 5000,
+      analytics: 3000,
+      blog: 15000,
+      ecommerce: 25000,
+      auth: 12000,
+      api: 10000,
+    },
+  },
+  EUR: {
+    tiers: {
+      landing: 600,
+      business: 1400,
+      application: 2800,
+      corporate: 6000,
+    },
+    addons: {
+      contactForm: 120,
+      database: 800,
+      localization: 320,
+      seo: 200,
+      analytics: 120,
+      blog: 600,
+      ecommerce: 1000,
+      auth: 480,
+      api: 400,
+    },
+  },
 };
 
 const DESIGN_DISCOUNT = 0.15;
 const NONPROFIT_DISCOUNT = 0.5;
 
-function formatPrice(price: number): string {
-  return price.toLocaleString("cs-CZ");
-}
-
 export default function PriceCalculator() {
   const t = useTranslations();
+  const locale = useLocale();
+  const [currency, setCurrency] = useState<Currency>(defaultCurrencies[locale]);
+  const { tiers: tierPrices, addons: addonPrices } = priceLists[currency];
+  const currencyLabel = t.pricing.currencies[currency];
+  const formatPrice = (price: number) => price.toLocaleString(locale);
   const [selectedTier, setSelectedTier] = useState<Tier>("business");
   const [selectedAddons, setSelectedAddons] = useState<Set<string>>(new Set());
   const [hasDesign, setHasDesign] = useState(false);
@@ -77,7 +113,14 @@ export default function PriceCalculator() {
       : 0;
     const total = afterDesign - nonprofitDiscount;
     return { subtotal, designDiscount, nonprofitDiscount, total };
-  }, [selectedTier, selectedAddons, hasDesign, isNonprofit]);
+  }, [
+    tierPrices,
+    addonPrices,
+    selectedTier,
+    selectedAddons,
+    hasDesign,
+    isNonprofit,
+  ]);
 
   const lastDesignDiscount = useRef(designDiscount);
   const lastNonprofitDiscount = useRef(nonprofitDiscount);
@@ -117,9 +160,33 @@ export default function PriceCalculator() {
           <div className="md:col-span-8 lg:col-span-8 lg:col-start-5">
             {/* Tier selection */}
             <AnimatedSection>
-              <p className="mb-4 font-mono text-xs uppercase tracking-[0.3em] text-muted">
-                {t.pricing.tierLabel}
-              </p>
+              <div className="mb-4 flex items-center justify-between gap-4">
+                <p className="font-mono text-xs uppercase tracking-[0.3em] text-muted">
+                  {t.pricing.tierLabel}
+                </p>
+                <fieldset className="flex items-center gap-1 font-mono text-xs uppercase tracking-[0.2em]">
+                  <legend className="sr-only">
+                    {t.pricing.currencySwitch}
+                  </legend>
+                  {currencies.map((code, i) => (
+                    <span key={code} className="flex items-center">
+                      {i > 0 && <span className="mx-1 text-border">/</span>}
+                      <button
+                        type="button"
+                        onClick={() => setCurrency(code)}
+                        aria-pressed={currency === code}
+                        className={`transition-colors ${
+                          currency === code
+                            ? "text-accent"
+                            : "text-muted hover:text-foreground"
+                        }`}
+                      >
+                        {code}
+                      </button>
+                    </span>
+                  ))}
+                </fieldset>
+              </div>
               <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
                 {tiers.map((tier) => {
                   const active = selectedTier === tier.key;
@@ -164,7 +231,7 @@ export default function PriceCalculator() {
                       </span>
                       <span className="mt-1 block font-mono text-[0.65rem] text-muted">
                         {t.pricing.from} {formatPrice(tierPrices[tier.key])}{" "}
-                        {t.pricing.currency}
+                        {currencyLabel}
                       </span>
                     </motion.button>
                   );
@@ -367,8 +434,7 @@ export default function PriceCalculator() {
                       {t.pricing.tiers[selectedTier].name}
                     </span>
                     <span className="font-mono text-sm text-foreground">
-                      {formatPrice(tierPrices[selectedTier])}{" "}
-                      {t.pricing.currency}
+                      {formatPrice(tierPrices[selectedTier])} {currencyLabel}
                     </span>
                   </div>
 
@@ -382,7 +448,7 @@ export default function PriceCalculator() {
                         {t.pricing.addons[key as keyof typeof t.pricing.addons]}
                       </span>
                       <span className="font-mono text-sm text-foreground">
-                        +{formatPrice(addonPrices[key])} {t.pricing.currency}
+                        +{formatPrice(addonPrices[key])} {currencyLabel}
                       </span>
                     </div>
                   ))}
@@ -404,7 +470,7 @@ export default function PriceCalculator() {
                       </span>
                       <span className="font-mono text-sm text-accent">
                         &minus;{formatPrice(lastDesignDiscount.current)}{" "}
-                        {t.pricing.currency}
+                        {currencyLabel}
                       </span>
                     </div>
                   </motion.div>
@@ -424,7 +490,7 @@ export default function PriceCalculator() {
                       </span>
                       <span className="font-mono text-sm text-accent">
                         &minus;{formatPrice(lastNonprofitDiscount.current)}{" "}
-                        {t.pricing.currency}
+                        {currencyLabel}
                       </span>
                     </div>
                   </motion.div>
@@ -447,7 +513,7 @@ export default function PriceCalculator() {
                     >
                       {formatPrice(total)}{" "}
                       <span className="text-lg text-muted">
-                        {t.pricing.currency}
+                        {currencyLabel}
                       </span>
                     </motion.span>
                   </div>
