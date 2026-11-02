@@ -136,7 +136,11 @@
     "tierLabel": "Project scope",
     "addonsLabel": "Features & modules",
     "from": "from",
-    "currency": "CZK",
+    "currencySwitch": "Currency",
+    "currencies": {
+      "CZK": "CZK",
+      "EUR": "EUR"
+    },
     "estimate": "Estimated price",
     "total": "Total",
     "disclaimer": "This is a non-binding estimate for orientation purposes. The final price depends on the specific requirements and complexity of your project. Let's talk about the details — reach me at ",

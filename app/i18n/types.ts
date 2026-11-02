@@ -76,7 +76,11 @@ export interface Translations {
     tierLabel: string;
     addonsLabel: string;
     from: string;
-    currency: string;
+    currencySwitch: string;
+    currencies: {
+      CZK: string;
+      EUR: string;
+    };
     estimate: string;
     total: string;
     disclaimer: string;

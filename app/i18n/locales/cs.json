@@ -136,7 +136,11 @@
     "tierLabel": "Rozsah projektu",
     "addonsLabel": "Funkce a\u00A0moduly",
     "from": "od",
-    "currency": "Kč",
+    "currencySwitch": "Měna",
+    "currencies": {
+      "CZK": "Kč",
+      "EUR": "EUR"
+    },
     "estimate": "Odhadovaná cena",
     "total": "Celkem",
     "disclaimer": "Jedná se o\u00A0nezávazný orientační odhad. Konečná cena závisí na konkrétních požadavcích a\u00A0složitosti projektu. Pojďme si o\u00A0detailech promluvit — napište mi na ",

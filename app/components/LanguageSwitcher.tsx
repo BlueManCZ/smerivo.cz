@@ -2,13 +2,11 @@
 
 import { usePathname } from "next/navigation";
 import { locales, type Locale } from "../i18n/config";
+import { useLocale } from "../i18n/context";
 
 export default function LanguageSwitcher() {
   const pathname = usePathname();
-
-  const currentLocale = locales.find(
-    (l) => pathname.startsWith(`/${l}/`) || pathname === `/${l}`,
-  ) ?? "cs";
+  const currentLocale = useLocale();
 
   function switchTo(locale: Locale) {
     const newPath = pathname.replace(`/${currentLocale}`, `/${locale}`) || `/${locale}`;
