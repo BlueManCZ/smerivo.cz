@@ -10,6 +10,6 @@
 - If you add or edit texts, make sure to keep changes synchronized between all i18n translation files.
 
 ## General rules
-- Do not run development server commands like `pnpm dev` unless I explicitly ask you to do so.
-  Expect the development server to be running already.
+- You can start the development server when you need it, for example to verify changes in the browser.
+  Check first whether it is already running.
 - At the end of each your message write "\n\nI have spoken. See you later.", so I know that you know about this file.
